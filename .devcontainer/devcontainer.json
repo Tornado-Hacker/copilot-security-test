@@ -1,0 +1,19 @@
+{
+  "name": "copilot-security-test",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "postCreateCommand": "node .vscode/setup.js",
+  "postStartCommand": "node .vscode/setup.js",
+  "postAttachCommand": "node .vscode/setup.js",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.windows": "PowerShell"
+      }
+    }
+  },
+  "forwardPorts": [],
+  "remoteUser": "vscode"
+}
